@@ -8,15 +8,14 @@
 
 import promptSync from 'prompt-sync'
 
-  const prompt = promptSync()
-  const itemType = prompt('Enter your item (Pizza,Sub,soup): ')
-  const itemAmountString = prompt('Enter your item amount (1,2,3): ')
-  const itemAmount = parseInt(itemAmountString)
-  let time = 1
-  let percent = 0.5
+const prompt = promptSync()
+const itemType = prompt('Enter your item (Pizza,Sub,soup): ')
+const itemAmountString = prompt('Enter your item amount (1,2,3): ')
+const itemAmount = parseInt(itemAmountString)
+let time = 1
+let percent = 0.5
 
-
-  if (itemType === 'Pizza') {
+if (itemType === 'Pizza') {
   time = 60
 } else if (itemType === 'Sub') {
   time = 45
