@@ -161,16 +161,16 @@
                 <mxCell id="49" value="percent = 2" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="700" y="840" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="52" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="51" target="53" edge="1">
+                <mxCell id="52" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="51" target="66" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="550" y="1010" as="targetPoint"/>
+                        <mxPoint x="430" y="1090" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="51" value="answer = time * percent" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="370" y="980" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="370" y="940" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="53" value="Stop" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="1080" width="100" height="60" as="geometry"/>
+                    <mxGeometry x="380" y="1200" width="100" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="57" value="Invalid Input" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="860" y="430" width="120" height="60" as="geometry"/>
@@ -211,6 +211,12 @@
                             <mxPoint x="760" y="920"/>
                         </Array>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="67" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="66" target="53">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="console.log&lt;br&gt;(`It will take &lt;br&gt;${answer} &lt;br&gt;seconds to took`)" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="1060" width="140" height="90" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
