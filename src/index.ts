@@ -2,7 +2,7 @@
  * The program is the classic
  * microwave.
  *
- * By:      Jackson Naufal
+ * By:      Huzaifa Khalid
  * Version: 1.0
  * Since:   2020-09-20
  */
