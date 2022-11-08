@@ -1,40 +1,66 @@
 /**
- * The program shows how long it takes to heat up items.
+ * The program is the classic
+ * microwave.
  *
- * By:      Huzaifa Khalid
+ * By:      Jackson Naufal
  * Version: 1.0
- * Since:   2022-09-14
+ * Since:   2020-09-20
  */
 
 import promptSync from 'prompt-sync'
 
 const prompt = promptSync()
-const itemType = prompt('Enter your item (Pizza,Sub,soup): ')
-const itemAmountString = prompt('Enter your item amount (1,2,3): ')
-const itemAmount = parseInt(itemAmountString)
-let time = 1
-let percent = 0.5
 
-if (itemType === 'Pizza') {
-  time = 60
-} else if (itemType === 'Sub') {
-  time = 45
-} else if (itemType === 'Soup') {
-  time = 90
+// These are my constants for my program
+const subTime = 60
+const pizzaTime = 45
+const soupTime = 105
+const two = 1.5
+const three = 2
+let time = 0
+let minutes = 0
+let seconds = 0
+
+// let userInput = soup, pizza, or sub
+const userInput = prompt('Enter your choice, sub, pizza or soup: ')
+
+// this checks if the user inputted a valid item
+if (userInput === 'sub' || userInput === 'pizza' || userInput === 'soup') {
+  const timeString = prompt('Enter your amount: ')
+  const amountNumber = parseFloat(timeString)
+
+  // this checks what the user inputted
+  if (userInput === 'sub') {
+    time = subTime
+  } else if (userInput === 'pizza') {
+    time = pizzaTime
+  } else if (userInput === 'soup') {
+    time = soupTime
+  }
+
+  // this checks the amount of what the user inputted
+  if (amountNumber === 1 || amountNumber === 2 || amountNumber === 3) {
+    if (amountNumber === 2) {
+      time = time * two
+    } else if (amountNumber === 3) {
+      time = time * three
+    }
+
+    // this converts the time to minutes and seconds
+    seconds = time / 60
+    minutes = Math.floor(seconds)
+    seconds = (seconds - minutes) * 60
+    console.log(
+      `The ${userInput} will be done in ${minutes} minutes ${seconds} seconds!`
+    )
+
+    // this catches invalid number inputs
+  } else {
+    console.log('Invalid Number!')
+  }
+
+  // this catches invalid food inputs
 } else {
   console.log('Invalid Input')
 }
-
-if (itemAmount === 1) {
-  percent = 1
-} else if (itemAmount === 2) {
-  percent = 1.5
-} else if (itemAmount === 3) {
-  percent = 2
-} else {
-  console.log('Invalid Input')
-}
-const answer = time * percent
-console.log('It will take ${answer} seconds to cook')
-
 console.log('\nDone.')
